@@ -1,5 +1,5 @@
 {
-  "name": "dumsor-tracker-api",
+  "name": "task-logger-api-main",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
