@@ -8,5 +8,5 @@ dotenv.config();
 const port = 6000;
 
 app.listen(port, () => {
-  console.log(`Task Logger running on port ${port}.... `);
+  console.log(`Task Logger running on port ${port}....`);
 });
