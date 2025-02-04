@@ -21,7 +21,7 @@ exports.getAllLogs = catchAsync(async (req, res, next) => {
     if (req.query.location) {
       query = { location: { $regex: new RegExp(req.query.location, 'i') } };
     }
-    
+
     const [logs, totalLogs] = await Promise.all([
       Log.find(query).skip(skip).limit(pageSize).sort({ createdAt: -1 }),
       Log.countDocuments(query),
@@ -50,7 +50,6 @@ exports.getAllLogs = catchAsync(async (req, res, next) => {
 
 exports.getLog = catchAsync(async (req, res, next) => {
   try {
-
     const log = await Log.findById(req.params.id);
     if (!log) {
       return res.status(404).json({
