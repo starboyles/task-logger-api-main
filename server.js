@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+dotenv.config();
 const app = require('./app');
 const { admin, db } = require('./config/firebase.config');
 
-dotenv.config();
+
 
 const port = 6000;
 
